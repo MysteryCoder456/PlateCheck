@@ -1,0 +1,26 @@
+[project]
+name = "plate-check"
+version = "0.1.0"
+description = "Nutrition information neural network"
+readme = "README.md"
+authors = [
+    { name = "Rehatbir Singh", email = "rsingh269@wisc.edu" },
+    { name = "Shiv Gorantiwar", email = "sgorantiwar@wisc.edu" },
+    { name = "Kunze Li", email = "kli442@wisc.edu" },
+    { name = "Weijie Yin", email = "wyin34@wisc.edu" },
+]
+requires-python = ">=3.12"
+
+[tool.uv.workspace]
+members = [
+    "server",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.5",
+]

@@ -1,0 +1,18 @@
+[project]
+name = "inference-server"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Rehatbir Singh", email = "rsingh269@wisc.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.163.2",
+]
+
+# [project.scripts]
+# inference-server = "inference_server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
