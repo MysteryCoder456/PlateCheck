@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlateCheck · Meal preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-icon">◒</span> PlateCheck</div><span class="badge">Frontend prototype</span></header>
+    <section class="intro"><p class="eyebrow">YOUR MEAL, MADE CLEAR</p><h1>See what is on your plate.</h1><p>Preview a meal photo, adjust each item, and see the nutrition totals update.</p></section>
+    <div class="grid">
+      <section class="card photo-card" aria-labelledby="photo-title"><div class="card-heading"><h2 id="photo-title">Meal photo</h2><span>01 / Input</span></div>
+        <label class="dropzone" id="dropzone" for="photo-input"><img id="preview" alt="Selected meal preview" hidden><span id="upload-hint"><span class="upload-icon">↑</span><strong>Choose a meal photo</strong><small>PNG or JPEG · stays in your browser</small></span></label>
+        <input id="photo-input" type="file" accept="image/png,image/jpeg">
+        <p class="note">The photo is for preview only. Nutrition below uses editable sample data; the model is not connected yet.</p>
+      </section>
+      <section class="card results" aria-labelledby="results-title"><div class="card-heading"><h2 id="results-title">Nutrition estimate</h2><span>02 / Review</span></div>
+        <div class="sample-flag">Sample data · not a photo prediction</div>
+        <div class="calories"><span>Total energy</span><div><strong id="total-calories">0</strong><span>kcal</span></div></div>
+        <div class="macros"><div><span>Protein</span><strong id="total-protein">0 g</strong></div><div><span>Carbs</span><strong id="total-carbs">0 g</strong></div><div><span>Fat</span><strong id="total-fat">0 g</strong></div></div>
+        <div class="items-heading"><h3>Food items</h3><span>Edit amounts to recalculate</span></div>
+        <div id="items" class="items"></div>
+        <form id="add-form" class="add-form"><label for="food-select">Add an item</label><div><select id="food-select"></select><button type="submit">Add item</button></div></form>
+      </section>
+    </div>
+    <footer>PlateCheck · CS 539 integration project · UI prototype</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
