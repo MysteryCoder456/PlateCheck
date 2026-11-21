@@ -7,11 +7,9 @@ server returns item mass and per-item nutrients with agreed units.
 from dataclasses import replace
 
 import streamlit as st
-
 from platecheck_ui.demo import DEMO_FOODS, starting_items
 from platecheck_ui.models import FoodItem
 from platecheck_ui.nutrition import meal_nutrients
-
 
 st.set_page_config(page_title="PlateCheck", page_icon="🍽️", layout="wide")
 st.title("PlateCheck")

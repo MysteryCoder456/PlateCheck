@@ -2,7 +2,6 @@
 
 from .models import FoodItem, Nutrients
 
-
 # These are illustrative values, not USDA data or neural-network predictions.
 DEMO_FOODS = {
     "Grilled chicken": Nutrients(1.65, .31, 0, .036),

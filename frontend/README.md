@@ -3,8 +3,8 @@
 From the repository root:
 
 ```bash
-python3 -m pip install -r frontend/requirements.txt
-python3 -m streamlit run frontend/app.py
+uv sync
+uv run --package platecheck-frontend streamlit run frontend/app.py
 ```
 
 The page previews a PNG/JPEG meal photo and displays clearly labeled sample nutrition data. Item amounts can be changed, added, or removed; totals update in the browser. The photo is not analyzed by a model.
@@ -16,7 +16,7 @@ The page previews a PNG/JPEG meal photo and displays clearly labeled sample nutr
 - `platecheck_ui/nutrition.py`: deterministic per-item and meal totals, independent of Streamlit.
 - `platecheck_ui/demo.py`: illustrative values used until real results are available.
 
-The nutrition calculations have no UI dependency, so they can be reused when C1 segmentation and C2 mass prediction feed C3. Run the small calculation checks with `python3 -m unittest discover -s frontend/tests`.
+The nutrition calculations have no UI dependency, so they can be reused when C1 segmentation and C2 mass prediction feed C3. Run the small calculation checks with `uv run --package platecheck-frontend python -m unittest discover -s frontend/tests`.
 
 ## Next integration step
 
