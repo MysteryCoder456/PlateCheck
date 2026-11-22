@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local downloads (C1 weights, Nutrition5k / FoodSeg103 samples)
+/models/
+/data/
+notebooks/models/
+notebooks/data/
